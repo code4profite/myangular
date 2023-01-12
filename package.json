@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code4profite/myangular.git"
+    "url": "https://github.com/code4profite/myangular.git"
   },
   "author": "seheratsuki",
   "license": "ISC",
@@ -21,15 +21,17 @@
   },
   "homepage": "https://github.com/code4profite/myangular#readme",
   "devDependencies": {
+    "browserify": "^17.0.0",
     "jasmine-core": "^4.5.0",
     "jshint": "^2.13.6",
     "karma": "^6.4.1",
+    "karma-browserify": "^8.1.0",
     "karma-chrome-launcher": "^3.1.1",
+    "karma-firefox-launcher": "^2.1.2",
     "karma-jasmine": "^5.1.0",
     "karma-jshint-preprocessor": "0.0.6",
-    "sinon": "^15.0.1"
+    "sinon": "^15.0.1",
+    "watchify": "^4.0.0"
   },
-  "dependencies": {
-    "karma-firefox-launcher": "^2.1.2"
-  }
+  "dependencies": {}
 }
