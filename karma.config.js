@@ -1,7 +1,7 @@
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['browserify','jasmine'],
     files: [
         'src/**/*.js',
         'test/**/*_spec.js'
@@ -9,16 +9,22 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-        'test/**/*.js': ['jshint'],
-        'src/**/*.js': ['jshint']
+        'test/**/*.js': ['jshint','browserify'],
+        'src/**/*.js': ['jshint','browserify']
     },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome','Firefox'],
+    browserify:
+    { 
+      debug:true,
+      bundleDelay: 2000
+    }, 
     singleRun: true,
     concurrency :Infinity,
-    singleRun : false
+    singleRun : false,
+
   });
 };
