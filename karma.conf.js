@@ -21,7 +21,7 @@ module.exports = function(config) {
     { 
       debug:true,
       bundleDelay: 2000
-    }, 
+    },
     singleRun: true,
     concurrency :Infinity,
     singleRun : false,
