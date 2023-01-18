@@ -25,6 +25,7 @@ Scope.prototype.$watch = function (watchFn,listenerFn,valueEq) {
         var index = self.$$watchers.indexOf(watcher);
         if(index>=0){
             self.$$watchers.splice(index,1);
+            self.$$lastDirtyWatch = null;
         }
     };
 };
@@ -45,7 +46,7 @@ Scope.prototype.$$digestOnce = function () {
                 watcher.listenerFn(newValue,( oldValue === initWatchVal) ? newValue: oldValue ,self);
                 dirty = true;
             }else if(self.$$lastDirtyWatch === watcher){ 
-                console.log("test !!!!");
+                //console.log("test !!!!");
                 return false;
             }
         } catch (e) {

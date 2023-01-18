@@ -1,7 +1,7 @@
 'use strict';
 var _ = require('lodash');
 var Scope = require('../src/scope');
-/*
+//*
 describe('Scope',function(){
     it('can be constructed and used as an object', function(){
         var scope= new Scope();
@@ -18,7 +18,7 @@ describe('digest',function(){
     beforeEach(function () {
         scope = new Scope();
     });
-/*
+//*
     it('calls the listener function of a watch on first $digest',function(){
         var watchFn = function() { return 'wat';};
         var listenerFn = jasmine.createSpy();
@@ -299,7 +299,7 @@ describe('digest',function(){
         scope.$watch(
             function(scope){
                 watchCalls.push('first');
-                console.log("\n push first \n");
+                //console.log("\n push first \n");
                 return scope.aValue;
             }
         );
@@ -307,7 +307,7 @@ describe('digest',function(){
         var destroyWatch = scope.$watch(
             function(scope){
                 watchCalls.push('second');
-                console.log("\n push second \n");
+                //console.log("\n push second \n");
                 destroyWatch();
             }
         );
@@ -315,13 +315,36 @@ describe('digest',function(){
         scope.$watch(
             function(scope){
                 watchCalls.push('third');
-                console.log("\n push third \n");
+                //console.log("\n push third \n");
                 return scope.aValue;
             }
         );
 
         scope.$digest();
         expect(watchCalls).toEqual(['first','second','third','first','third']);
+    });
+
+    it('allows a $watch to destroy another during digest',function(){
+        scope.aValue = 'abc';
+        scope.counter = 0;
+
+        scope.$watch(
+            function(scope){return scope.aValue;},
+            function(newValue,oldValue,scope){
+                destroyWatch();
+            } 
+        );
+        var destroyWatch = scope.$watch(
+            function(scope){return scope.aValue;},
+            function(newValue,oldValue,scope){} 
+        );
+        scope.$watch(
+            function(scope){return scope.aValue;},
+            function(newValue,oldValue,scope){scope.counter++;} 
+        );
+
+        scope.$digest();
+        expect(scope.counter).toBe(1);
     });
     
     
