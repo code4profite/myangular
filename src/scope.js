@@ -35,19 +35,21 @@ Scope.prototype.$$digestOnce = function () {
     var newValue, oldValue, dirty;
     _.forEachRight(this.$$watchers,function(watcher){
         try {
-            newValue= watcher.watchFn(self);
-            oldValue = watcher.last;
-            //console.log(self.$$lastDirtyWatch === watcher);
-            //console.log('\n\n '+JSON.stringify(self) + '\n\n');  
-            if(!self.$$areEquals(newValue,oldValue,watcher.valueEq)){
-                self.$$lastDirtyWatch = watcher;    
-                watcher.last = (watcher.valueEq) ? _.cloneDeep(newValue): newValue; 
-                //console.log('\n\n '+ JSON.stringify(watcher) + '\n\n');
-                watcher.listenerFn(newValue,( oldValue === initWatchVal) ? newValue: oldValue ,self);
-                dirty = true;
-            }else if(self.$$lastDirtyWatch === watcher){ 
-                //console.log("test !!!!");
-                return false;
+            if (watcher) {
+                newValue= watcher.watchFn(self);
+                oldValue = watcher.last;
+                //console.log(self.$$lastDirtyWatch === watcher);
+                //console.log('\n\n '+JSON.stringify(self) + '\n\n');  
+                if(!self.$$areEquals(newValue,oldValue,watcher.valueEq)){
+                    self.$$lastDirtyWatch = watcher;    
+                    watcher.last = (watcher.valueEq) ? _.cloneDeep(newValue): newValue; 
+                    //console.log('\n\n '+ JSON.stringify(watcher) + '\n\n');
+                    watcher.listenerFn(newValue,( oldValue === initWatchVal) ? newValue: oldValue ,self);
+                    dirty = true;
+                }else if(self.$$lastDirtyWatch === watcher){ 
+                    //console.log("test !!!!");
+                    return false;
+                }
             }
         } catch (e) {
             console.log(e);

@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Chrome 108.0.0.0 (Windows 10)</title>
+<title>Chrome 109.0.0.0 (Windows 10)</title>
 <style>
 body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 #HTMLReporter h1 { font-size: 12px; font-weight: normal; text-align: right; margin: 10px 0 10px 0 !important; }
@@ -94,7 +94,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </head>
 
 <body id="HTMLReporter" class="html-reporter">
-<h1>Tested in Chrome 108.0.0.0 (Windows 10) on Wed Jan 18 2023</h1>
+<h1>Tested in Chrome 109.0.0.0 (Windows 10) on Fri Jan 20 2023</h1>
 
 <div class="alert">
 
@@ -118,7 +118,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       <span class="description">digest</span>
     
       <div class="specSummary passed">
-      <span class="description">calls the watch function with the scope as the argument</span>
+      <span class="description">calls listener when watch value is first undefined</span>
       </div>
     
       <div class="specSummary passed">
@@ -126,27 +126,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       </div>
     
       <div class="specSummary passed">
-      <span class="description">does not end digest so that new watches are not run</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">gives up on the watches after 10 iterations</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">triggers chained watchers in the same digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">calls listener when watch value is first undefined</span>
-      </div>
-    
-      <div class="specSummary passed">
       <span class="description">allows destroying a $watch during digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">calls the listener function when watched value changes</span>
       </div>
     
       <div class="specSummary passed">
@@ -154,11 +134,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       </div>
     
       <div class="specSummary passed">
-      <span class="description">ends the digest when the last watch is clean</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">may have watchers that omit the listener function</span>
+      <span class="description">triggers chained watchers in the same digest</span>
       </div>
     
       <div class="specSummary passed">
@@ -166,7 +142,11 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       </div>
     
       <div class="specSummary passed">
-      <span class="description">calls listener with new value as old value the first time</span>
+      <span class="description">calls the listener function when watched value changes</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">gives up on the watches after 10 iterations</span>
       </div>
     
       <div class="specSummary passed">
@@ -174,11 +154,23 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       </div>
     
       <div class="specSummary passed">
+      <span class="description">calls the watch function with the scope as the argument</span>
+      </div>
+    
+      <div class="specSummary passed">
       <span class="description">correcly handles NanNs</span>
       </div>
     
       <div class="specSummary passed">
+      <span class="description">may have watchers that omit the listener function</span>
+      </div>
+    
+      <div class="specSummary passed">
       <span class="description">compares based on value if enabled</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">calls listener with new value as old value the first time</span>
       </div>
     
       <div class="specSummary passed">
@@ -187,6 +179,14 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
     
       <div class="specSummary passed">
       <span class="description">catches exceptions in watch function and continues</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">ends the digest when the last watch is clean</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">does not end digest so that new watches are not run</span>
       </div>
     
     </div>
