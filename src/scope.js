@@ -2,6 +2,8 @@
 
 var _ = require('lodash');
 
+function initWatchVal(){}
+
 function Scope(){
     this.$$watchers = [];
     this.$$lastDirtyWatch = null;
@@ -9,7 +11,7 @@ function Scope(){
 
 module.exports = Scope;
 
-function initWatchVal(){}
+
 
 Scope.prototype.$watch = function (watchFn,listenerFn,valueEq) {
     var self = this;
