@@ -1,33 +1,35 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome 109.0.0.0 (Mac OS 10.15.7)" package="" timestamp="2023-01-25T17:13:02" id="0" hostname="MacBook-Pro-de-sheratsuki.local" tests="20" errors="0" failures="0" time="0.011">
+<testsuite name="Chrome 109.0.0.0 (Mac OS 10.15.7)" package="" timestamp="2023-01-27T19:17:49" id="0" hostname="MacBook-Pro-de-sheratsuki.local" tests="22" errors="0" failures="0" time="0.013">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"/>
   </properties>
-  <testcase name="Scope can be constructed and used as an object" time="0.006" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).Scope"/>
-  <testcase name="digest allows destroying a $watch during digest" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest allows destroy several $watches during digest" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="Scope can be constructed and used as an object" time="0.005" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).Scope"/>
   <testcase name="digest allows destroying serveral $watches during digest" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest calls the listener function of a watch on first $digest" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest may have watchers that omit the listener function" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest calls the watch function with the scope as the argument" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest allows destroying a $watch with a removal function" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest calls listener when watch value is first undefined" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest catches exceptions in listeners function and continues" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest calls listener with new value as old value the first time" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest allows a $watch to destroy another during digest" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest compares based on value if enabled" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest calls the listener function when watched value changes" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest ends the digest when the last watch is clean" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest does not end digest so that new watches are not run" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest catches exceptions in watch function and continues" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
   <testcase name="digest correcly handles NanNs" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
-  <testcase name="digest triggers chained watchers in the same digest" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest compares based on value if enabled" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest allows a $watch to destroy another during digest" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest catches exceptions in listeners function and continues" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest catches exceptions in watch function and continues" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest ends the digest when the last watch is clean" time="0.002" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest allows destroy several $watches during digest" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest does not end digest so that new watches are not run" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest may have watchers that omit the listener function" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest calls listener with new value as old value the first time" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
   <testcase name="digest gives up on the watches after 10 iterations" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest triggers chained watchers in the same digest" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest calls the listener function of a watch on first $digest" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest allows destroying a $watch during digest" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest allows destroying a $watch with a removal function" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest calls the listener function when watched value changes" time="0.001" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest calls the watch function with the scope as the argument" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="digest calls listener when watch value is first undefined" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).digest"/>
+  <testcase name="$eval passes the second $eval argument straight through" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).$eval"/>
+  <testcase name="$eval executes $evaled function and returns result" time="0" classname="Chrome_109_0_0_0_(Mac_OS_10_15_7).$eval"/>
   <system-out>
-    <![CDATA[Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
+    <![CDATA[Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
 ,Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
 ,Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
-,Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
+,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
 ,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
 ,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
 

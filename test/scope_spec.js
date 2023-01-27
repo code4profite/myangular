@@ -1,4 +1,5 @@
 'use strict';
+const { result } = require('lodash');
 var _ = require('lodash');
 var Scope = require('../src/scope');
 //*
@@ -393,4 +394,28 @@ describe('digest',function(){
 
 
     /* */  
+});
+
+describe('$eval',function(){
+    var scope;
+    beforeEach(function(){
+        scope =  new Scope();
+    });
+
+    it('executes $evaled function and returns result',function() {
+        scope.aValue = 42;
+        var result = scope.$eval(function(scope){
+            return scope.aValue;
+        })
+        expect(result).toBe(42);
+    });
+
+    it('passes the second $eval argument straight through',function(){
+        scope.aValue = 42;
+        var result = scope.$eval(function(scope,arg){
+            return scope.aValue + arg; 
+        },2);
+        expect(result).toBe(44);
+    });
+
 });

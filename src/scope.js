@@ -11,8 +11,6 @@ function Scope(){
 
 module.exports = Scope;
 
-
-
 Scope.prototype.$watch = function (watchFn,listenerFn,valueEq) {
     var self = this;
     var watcher = {
@@ -83,3 +81,7 @@ Scope.prototype.$$areEquals = function(newValue,oldValue,valueEq){
         (typeof newValue === 'number' && typeof oldValue === 'number' && isNaN(newValue) && isNaN(oldValue)); 
     }
 };
+
+Scope.prototype.$eval = function (expr,locals) {
+    return expr(this,locals);
+}
