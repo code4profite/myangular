@@ -1,39 +1,41 @@
 <?xml version="1.0"?>
-<testsuite name="Firefox 109.0 (Mac OS 10.15)" package="" timestamp="2023-02-01T10:24:01" id="0" hostname="MacBook-Pro-de-sheratsuki.local" tests="24" errors="0" failures="0" time="0.008">
+<testsuite name="Firefox 109.0 (Mac OS 10.15)" package="" timestamp="2023-02-01T10:51:28" id="0" hostname="MacBook-Pro-de-sheratsuki.local" tests="24" errors="0" failures="0" time="0.006">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/109.0"/>
   </properties>
-  <testcase name="$evalAsync executes given function later in the same cycle" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).$evalAsync"/>
-  <testcase name="digest correcly handles NanNs" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest allows a $watch to destroy another during digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest calls the watch function with the scope as the argument" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest allows destroying serveral $watches during digest" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest calls the listener function of a watch on first $digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest allows destroying a $watch with a removal function" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest allows destroying a $watch during digest" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest triggers chained watchers in the same digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest gives up on the watches after 10 iterations" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest allows destroy several $watches during digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest ends the digest when the last watch is clean" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest does not end digest so that new watches are not run" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest calls the listener function when watched value changes" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest catches exceptions in watch function and continues" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="Scope can be constructed and used as an object" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).Scope"/>
   <testcase name="digest catches exceptions in listeners function and continues" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest calls listener when watch value is first undefined" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest compares based on value if enabled" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="digest calls listener with new value as old value the first time" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest allows destroying a $watch with a removal function" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest allows a $watch to destroy another during digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest allows destroying a $watch during digest" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest allows destroying serveral $watches during digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest calls the listener function of a watch on first $digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest allows destroy several $watches during digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest gives up on the watches after 10 iterations" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest ends the digest when the last watch is clean" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
   <testcase name="digest may have watchers that omit the listener function" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
-  <testcase name="Scope can be constructed and used as an object" time="0" classname="Firefox_109_0_(Mac_OS_10_15).Scope"/>
-  <testcase name="$apply executes the given function and starts the digest" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).$apply"/>
+  <testcase name="digest calls listener with new value as old value the first time" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest calls the watch function with the scope as the argument" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest calls the listener function when watched value changes" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest does not end digest so that new watches are not run" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest calls listener when watch value is first undefined" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest compares based on value if enabled" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest correcly handles NanNs" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest catches exceptions in watch function and continues" time="0.001" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="digest triggers chained watchers in the same digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).digest"/>
+  <testcase name="$apply executes the given function and starts the digest" time="0" classname="Firefox_109_0_(Mac_OS_10_15).$apply"/>
+  <testcase name="$evalAsync executes given function later in the same cycle" time="0" classname="Firefox_109_0_(Mac_OS_10_15).$evalAsync"/>
   <testcase name="$eval passes the second $eval argument straight through" time="0" classname="Firefox_109_0_(Mac_OS_10_15).$eval"/>
   <testcase name="$eval executes $evaled function and returns result" time="0" classname="Firefox_109_0_(Mac_OS_10_15).$eval"/>
   <system-out>
-    <![CDATA[Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
+    <![CDATA[Chrome 109.0.0.0 (Mac OS 10.15.7) ERROR
+  Disconnected Client disconnected from CONNECTED state (transport close)
+,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
+,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
 ,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
 ,Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
 ,Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
-,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
-,Chrome 109.0.0.0 (Mac OS 10.15.7) LOG: 'Error'
+,Firefox 109.0 (Mac OS 10.15) LOG: 'Error'
 
 ]]>
   </system-out>

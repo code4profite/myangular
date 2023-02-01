@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "karma start",
-    "lint": "jshint src test"
+    "lint": "jshint src test",
+    "doc": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "browserify": "^17.0.0",
     "jasmine-core": "^4.5.0",
+    "jsdoc": "^4.0.0",
     "jshint": "^2.13.6",
     "karma": "^6.4.1",
     "karma-browserify": "^8.1.0",
@@ -33,11 +35,13 @@
     "karma-jshint-preprocessor": "0.0.6",
     "karma-junit-reporter": "^2.0.1",
     "karma-mocha-reporter": "^2.2.5",
+    "minami": "^1.2.3",
     "sinon": "^15.0.1",
     "watchify": "^4.0.0"
   },
   "dependencies": {
     "jquery": "^3.6.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "taffydb": "^2.7.3"
   }
 }
