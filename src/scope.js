@@ -7,6 +7,7 @@ function initWatchVal(){}
 function Scope(){
     this.$$watchers = [];
     this.$$lastDirtyWatch = null;
+    this.$$asyncQueue = [];
 }
 
 module.exports = Scope;
@@ -63,6 +64,10 @@ Scope.prototype.$digest = function(){
     var dirty;
     this.$$lastDirtyWatch = null; 
     do{
+        while (this.$$asyncQueue.length) {
+            var asyncTask = this.$$asyncQueue.shift();
+            asyncTask.scope.$eval(asyncTask.expression);
+        }
         //console.log('\n digestOnce(); \n');
         dirty = this.$$digestOnce();
         //console.log('\ntest again ttl='+ttl+' dirty='+dirty+' \n' );
@@ -92,4 +97,8 @@ Scope.prototype.$apply = function(expr) {
     } finally {
         this.$digest();
     }
+}
+
+Scope.prototype.$evalAsync = function(expr){
+    this.$$asyncQueue.push({scope:this,expression:expr});
 };
