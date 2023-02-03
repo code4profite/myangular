@@ -449,7 +449,7 @@ describe('$apply', function() {
     beforeEach(function() {
       scope = new Scope();
     });
-
+    
     it('executes given function later in the same cycle',function(){
         scope.aValue = [1,2,3];
         scope.asyncEvaluated = false;

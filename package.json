@@ -9,7 +9,7 @@
   "scripts": {
     "test": "karma start",
     "lint": "jshint src test",
-    "doc": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+    "doc": "concurrently \"node_modules/.bin/jsdoc -c jsdoc.json\" \"http-server -a localhost -p 1234\" \"open http://localhost:1234/docs/myangular/${npm_package_version}\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
   "homepage": "https://github.com/code4profite/myangular#readme",
   "devDependencies": {
     "browserify": "^17.0.0",
+    "concurrently": "^7.6.0",
+    "http-server": "^14.1.1",
     "jasmine-core": "^4.5.0",
     "jsdoc": "^4.0.0",
     "jshint": "^2.13.6",

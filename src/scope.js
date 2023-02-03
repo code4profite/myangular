@@ -19,6 +19,7 @@ function Scope(){
     this.$$asyncQueue = [];
 }
 
+
 module.exports = Scope;
 
 Scope.prototype.$watch = function (watchFn,listenerFn,valueEq) {
@@ -96,10 +97,21 @@ Scope.prototype.$$areEquals = function(newValue,oldValue,valueEq){
     }
 };
 
+/**
+ * evalutate code in the context of a scope
+ * @param {requestCallback} expr 
+ * @param [*] locals 
+ * @returns {*}
+ */
 Scope.prototype.$eval = function (expr,locals) {
     return expr(this,locals);
 };
 
+/**
+ * Integration external code with the digest cycle
+ * @param {requestCallback} expr 
+ * @returns {*}
+ */
 Scope.prototype.$apply = function(expr) {
     try {
         return this.$eval(expr);
@@ -107,7 +119,10 @@ Scope.prototype.$apply = function(expr) {
         this.$digest();
     }
 }
-
+/**
+ * Deffered execution 
+ * @param {*} expr 
+ */
 Scope.prototype.$evalAsync = function(expr){
     this.$$asyncQueue.push({scope:this,expression:expr});
 };

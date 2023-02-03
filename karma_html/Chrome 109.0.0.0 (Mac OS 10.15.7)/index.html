@@ -94,7 +94,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </head>
 
 <body id="HTMLReporter" class="html-reporter">
-<h1>Tested in Chrome 109.0.0.0 (Mac OS 10.15.7) on Wed Feb 01 2023</h1>
+<h1>Tested in Chrome 109.0.0.0 (Mac OS 10.15.7) on Fri Feb 03 2023</h1>
 
 <div class="alert">
 
@@ -115,6 +115,105 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
   
   
     <div class="suite passed">
+      <span class="description">$evalAsync</span>
+    
+      <div class="specSummary passed">
+      <span class="description">executes given function later in the same cycle</span>
+      </div>
+    
+    </div>
+  
+    <div class="suite passed">
+      <span class="description">digest</span>
+    
+      <div class="specSummary passed">
+      <span class="description">ends the digest when the last watch is clean</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">allows destroy several $watches during digest</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">gives up on the watches after 10 iterations</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">allows destroying a $watch during digest</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">calls listener when watch value is first undefined</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">allows destroying serveral $watches during digest</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">may have watchers that omit the listener function</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">allows a $watch to destroy another during digest</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">calls listener with new value as old value the first time</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">compares based on value if enabled</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">catches exceptions in watch function and continues</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">correcly handles NanNs</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">does not end digest so that new watches are not run</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">triggers chained watchers in the same digest</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">allows destroying a $watch with a removal function</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">calls the listener function of a watch on first $digest</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">catches exceptions in listeners function and continues</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">calls the listener function when watched value changes</span>
+      </div>
+    
+      <div class="specSummary passed">
+      <span class="description">calls the watch function with the scope as the argument</span>
+      </div>
+    
+    </div>
+  
+    <div class="suite passed">
+      <span class="description">Scope</span>
+    
+      <div class="specSummary passed">
+      <span class="description">can be constructed and used as an object</span>
+      </div>
+    
+    </div>
+  
+    <div class="suite passed">
       <span class="description">$apply</span>
     
       <div class="specSummary passed">
@@ -132,105 +231,6 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
     
       <div class="specSummary passed">
       <span class="description">executes $evaled function and returns result</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">digest</span>
-    
-      <div class="specSummary passed">
-      <span class="description">calls the watch function with the scope as the argument</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">calls the listener function when watched value changes</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">calls listener when watch value is first undefined</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">calls listener with new value as old value the first time</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">catches exceptions in listeners function and continues</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">allows destroying serveral $watches during digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">may have watchers that omit the listener function</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">allows destroy several $watches during digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">triggers chained watchers in the same digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">calls the listener function of a watch on first $digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">allows destroying a $watch with a removal function</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">allows destroying a $watch during digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">gives up on the watches after 10 iterations</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">ends the digest when the last watch is clean</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">allows a $watch to destroy another during digest</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">catches exceptions in watch function and continues</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">does not end digest so that new watches are not run</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">compares based on value if enabled</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">correcly handles NanNs</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">$evalAsync</span>
-    
-      <div class="specSummary passed">
-      <span class="description">executes given function later in the same cycle</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Scope</span>
-    
-      <div class="specSummary passed">
-      <span class="description">can be constructed and used as an object</span>
       </div>
     
     </div>
